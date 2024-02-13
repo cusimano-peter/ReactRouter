@@ -1,12 +1,12 @@
 import React from 'react';
-import { Router, Routes, Route, Link } from 'react-router-dom';
+import { Router, Routes, Route, Link } from 'react-router-dom/client';
 import Red from './components/Red';
 import Blue from './components/Blue';
 import Home from './components/Home';
 
 function App() {
   return (
-    <Router>
+    <div>
       <div id="navbar">
         <Link to="/blue">Blue</Link>
         <Link to="/red">Red</Link>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/blue" element={<Blue />} />
         <Route path="/" element={<Home />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

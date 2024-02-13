@@ -7,25 +7,32 @@ body,
 body > div {
   height: 100vh;
   width: 100vw;
+  display: flex; /* Ensure body and its direct child div fill the viewport */
 }
 
 #container {
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-#container > div {
-  display: flex;
+  justify-content: space-between; /* Push #navbar and #main-section to the top and bottom */
 }
 
 #navbar {
   padding: 2em;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  align-items: center; /* Center the links vertically */
+}
+
+#navbar > * {
+  margin: 0 10px; /* Add margin between links */
 }
 
 #main-section {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #main-section > div {
@@ -36,12 +43,11 @@ body > div {
 }
 
 .red {
-  background-color: #b05f6d;
+  background-color: #f6052d;
   color: white;
 }
 
 .blue {
-  background-color: #275db3;
+  background-color: #064ec2;
   color: white;
 }
-
